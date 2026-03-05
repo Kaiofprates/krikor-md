@@ -1,0 +1,55 @@
+name: Chess Game
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  play:
+    if: startsWith(github.event.issue.title, 'Chess Move: ')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install Dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Process Move
+        run: |
+          TITLE="${{ github.event.issue.title }}"
+          MOVE=$(echo "$TITLE" | sed 's/Chess Move: //')
+          python3 chess_engine.py move "$MOVE"
+
+      - name: Update README
+        run: |
+          python3 update_readme.py
+
+      - name: Commit and Push
+        run: |
+          git config --global user.name "Chess Bot"
+          git config --global user.email "chess-bot@github.com"
+          git add README.md board.svg game_state.json
+          git commit -m "Move: ${{ github.event.issue.title }}" || echo "No changes to commit"
+          git push
+
+      - name: Close Issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              state: 'closed'
+            })
