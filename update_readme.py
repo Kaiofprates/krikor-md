@@ -42,9 +42,9 @@ def generate_readme():
     turn = "Brancas" if board.turn == chess.WHITE else "Pretas"
     
     # Start building the README content
-    content = f"""# ♟️ Jogo de Xadrez no GitHub Actions
+    content = f"""# ♟️ Krikor Chess Actions
 
-Este é um jogo de xadrez que você joga abrindo Issues!
+Um jogo de xadrez colaborativo direto no GitHub — jogue abrindo Issues!
 
 ## Tabuleiro Atual
 Vez das: **{turn}**
