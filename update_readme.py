@@ -1,4 +1,5 @@
 import chess
+import hashlib
 import json
 import os
 import subprocess
@@ -48,7 +49,7 @@ Este é um jogo de xadrez que você joga abrindo Issues!
 ## Tabuleiro Atual
 Vez das: **{turn}**
 
-![Tabuleiro]({BOARD_FILE})
+![Tabuleiro]({BOARD_FILE}?v={hashlib.md5(board.fen().encode()).hexdigest()[:8]})
 
 ## Como Jogar
 Clique em um dos links abaixo para fazer sua jogada. Isso abrirá uma Issue pré-preenchida. Basta clicar em **"Submit new issue"** para confirmar o movimento.
