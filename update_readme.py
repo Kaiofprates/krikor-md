@@ -1,13 +1,30 @@
 import chess
 import json
 import os
+import subprocess
 
 STATE_FILE = "game_state.json"
 README_FILE = "README.md"
 BOARD_FILE = "board.svg"
 
 # Replace with your actual GitHub repo info
-repo_full_name = os.environ.get("GITHUB_REPOSITORY", "YOUR_GITHUB_USERNAME/YOUR_REPO_NAME")
+repo_full_name = os.environ.get("GITHUB_REPOSITORY", "")
+
+if not repo_full_name:
+    try:
+        remote_url = subprocess.check_output(
+            ["git", "remote", "get-url", "origin"], stderr=subprocess.DEVNULL
+        ).decode().strip()
+        # Handle both https and ssh URLs
+        if remote_url.endswith(".git"):
+            remote_url = remote_url[:-4]
+        if "github.com/" in remote_url:
+            repo_full_name = remote_url.split("github.com/")[-1]
+        elif "github.com:" in remote_url:
+            repo_full_name = remote_url.split("github.com:")[-1]
+    except Exception:
+        repo_full_name = "YOUR_GITHUB_USERNAME/YOUR_REPO_NAME"
+
 USER, REPO = repo_full_name.split("/", 1) if "/" in repo_full_name else ("USER", "REPO")
 
 def load_state():
