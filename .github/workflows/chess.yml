@@ -6,7 +6,7 @@ on:
 
 jobs:
   play:
-    if: startsWith(github.event.issue.title, 'Chess Move: ')
+    if: ${{ startsWith(github.event.issue.title, 'Chess Move: ') }}
     runs-on: ubuntu-latest
     permissions:
       contents: write
