@@ -56,13 +56,39 @@ Clique em um dos links abaixo para fazer sua jogada. Isso abrirá uma Issue pré
 
 ### Movimentos Legais
 """
-    
-    # List legal moves as links
+
+    # Group legal moves by piece type
+    piece_groups = {
+        "♚ Rei": [],
+        "♛ Dama": [],
+        "♜ Torre": [],
+        "♝ Bispo": [],
+        "♞ Cavalo": [],
+        "♟ Peão": [],
+    }
+
+    piece_map = {
+        "K": "♚ Rei",
+        "Q": "♛ Dama",
+        "R": "♜ Torre",
+        "B": "♝ Bispo",
+        "N": "♞ Cavalo",
+    }
+
     legal_moves = list(board.legal_moves)
     for move in legal_moves:
         san = board.san(move)
+        # First char uppercase = piece move, otherwise pawn
+        if san[0].isupper():
+            group = piece_map.get(san[0], "♟ Peão")
+        else:
+            group = "♟ Peão"
         issue_url = f"https://github.com/{USER}/{REPO}/issues/new?title=Chess+Move:+{san}"
-        content += f"- [{san}]({issue_url})\n"
+        piece_groups[group].append(f"[`{san}`]({issue_url})")
+
+    for group_name, moves in piece_groups.items():
+        if moves:
+            content += f"\n**{group_name}** · {' '.join(moves)}\n"
 
     move_number = board.fullmove_number
     reset_url = f"https://github.com/{USER}/{REPO}/issues/new?title=Chess+Reset&body=Clique+em+Submit+para+reiniciar+a+partida"
