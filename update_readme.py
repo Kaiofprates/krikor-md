@@ -64,9 +64,10 @@ Clique em um dos links abaixo para fazer sua jogada. Isso abrirá uma Issue pré
         issue_url = f"https://github.com/{USER}/{REPO}/issues/new?title=Chess+Move:+{san}"
         content += f"- [{san}]({issue_url})\n"
 
+    move_number = board.fullmove_number
     content += f"""
 ---
-Partida em andamento. Última atualização: {board.fen()}
+♟️ Partida em andamento · Jogada #{move_number}
 """
 
     with open(README_FILE, "w", encoding="utf-8") as f:
