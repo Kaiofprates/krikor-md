@@ -3,32 +3,34 @@
 Este é um jogo de xadrez que você joga abrindo Issues!
 
 ## Tabuleiro Atual
-Vez das: **Pretas**
+Vez das: **Brancas**
 
-![Tabuleiro](board.svg?v=86a545ed)
+![Tabuleiro](board.svg?v=0056992a)
 
 ## Como Jogar
 Clique em um dos links abaixo para fazer sua jogada. Isso abrirá uma Issue pré-preenchida. Basta clicar em **"Submit new issue"** para confirmar o movimento.
 
 ### Movimentos Legais
-- [Rg8](https://github.com/Kaiofprates/krikor-md/issues/new?title=Chess+Move:+Rg8)
-- [Qe8](https://github.com/Kaiofprates/krikor-md/issues/new?title=Chess+Move:+Qe8)
-- [Rb8](https://github.com/Kaiofprates/krikor-md/issues/new?title=Chess+Move:+Rb8)
-- [Ke8](https://github.com/Kaiofprates/krikor-md/issues/new?title=Chess+Move:+Ke8)
-- [Kd6](https://github.com/Kaiofprates/krikor-md/issues/new?title=Chess+Move:+Kd6)
-- [Nb8](https://github.com/Kaiofprates/krikor-md/issues/new?title=Chess+Move:+Nb8)
-- [Na5](https://github.com/Kaiofprates/krikor-md/issues/new?title=Chess+Move:+Na5)
-- [Nd4](https://github.com/Kaiofprates/krikor-md/issues/new?title=Chess+Move:+Nd4)
-- [Nb4](https://github.com/Kaiofprates/krikor-md/issues/new?title=Chess+Move:+Nb4)
-- [h6](https://github.com/Kaiofprates/krikor-md/issues/new?title=Chess+Move:+h6)
-- [g6](https://github.com/Kaiofprates/krikor-md/issues/new?title=Chess+Move:+g6)
-- [d6](https://github.com/Kaiofprates/krikor-md/issues/new?title=Chess+Move:+d6)
-- [b6](https://github.com/Kaiofprates/krikor-md/issues/new?title=Chess+Move:+b6)
-- [a6](https://github.com/Kaiofprates/krikor-md/issues/new?title=Chess+Move:+a6)
+- [Nh3](https://github.com/Kaiofprates/krikor-md/issues/new?title=Chess+Move:+Nh3)
+- [Nf3](https://github.com/Kaiofprates/krikor-md/issues/new?title=Chess+Move:+Nf3)
+- [Nc3](https://github.com/Kaiofprates/krikor-md/issues/new?title=Chess+Move:+Nc3)
+- [Na3](https://github.com/Kaiofprates/krikor-md/issues/new?title=Chess+Move:+Na3)
+- [h3](https://github.com/Kaiofprates/krikor-md/issues/new?title=Chess+Move:+h3)
+- [g3](https://github.com/Kaiofprates/krikor-md/issues/new?title=Chess+Move:+g3)
+- [f3](https://github.com/Kaiofprates/krikor-md/issues/new?title=Chess+Move:+f3)
+- [e3](https://github.com/Kaiofprates/krikor-md/issues/new?title=Chess+Move:+e3)
+- [d3](https://github.com/Kaiofprates/krikor-md/issues/new?title=Chess+Move:+d3)
+- [c3](https://github.com/Kaiofprates/krikor-md/issues/new?title=Chess+Move:+c3)
+- [b3](https://github.com/Kaiofprates/krikor-md/issues/new?title=Chess+Move:+b3)
+- [a3](https://github.com/Kaiofprates/krikor-md/issues/new?title=Chess+Move:+a3)
+- [h4](https://github.com/Kaiofprates/krikor-md/issues/new?title=Chess+Move:+h4)
+- [g4](https://github.com/Kaiofprates/krikor-md/issues/new?title=Chess+Move:+g4)
+- [f4](https://github.com/Kaiofprates/krikor-md/issues/new?title=Chess+Move:+f4)
 - [e4](https://github.com/Kaiofprates/krikor-md/issues/new?title=Chess+Move:+e4)
-- [h5](https://github.com/Kaiofprates/krikor-md/issues/new?title=Chess+Move:+h5)
-- [b5](https://github.com/Kaiofprates/krikor-md/issues/new?title=Chess+Move:+b5)
-- [a5](https://github.com/Kaiofprates/krikor-md/issues/new?title=Chess+Move:+a5)
+- [d4](https://github.com/Kaiofprates/krikor-md/issues/new?title=Chess+Move:+d4)
+- [c4](https://github.com/Kaiofprates/krikor-md/issues/new?title=Chess+Move:+c4)
+- [b4](https://github.com/Kaiofprates/krikor-md/issues/new?title=Chess+Move:+b4)
+- [a4](https://github.com/Kaiofprates/krikor-md/issues/new?title=Chess+Move:+a4)
 
 ---
-♟️ Partida em andamento · Jogada #5 · [🔄 Reiniciar Partida](https://github.com/Kaiofprates/krikor-md/issues/new?title=Chess+Reset&body=Clique+em+Submit+para+reiniciar+a+partida)
+♟️ Partida em andamento · Jogada #1 · [🔄 Reiniciar Partida](https://github.com/Kaiofprates/krikor-md/issues/new?title=Chess+Reset&body=Clique+em+Submit+para+reiniciar+a+partida)
